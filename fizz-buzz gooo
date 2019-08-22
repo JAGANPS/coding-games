@@ -1,0 +1,28 @@
+package main
+
+import "fmt"
+var a int
+var b int
+var c int
+var n int
+func main() {
+	fmt.Println("enter the range of the game")
+	fmt.Scan(&n)
+	fmt.Println("enter the number to occur fizz")
+	fmt.Scan(&a)
+	fmt.Println("enter the number to ocuur buzz")
+	fmt.Scan(&b)
+	c= a*b
+	fmt.Println("the product of the choosen value at which fizzbuzz occurs at",c)
+	for i := 0; i <= n; i++ {
+		if i%c == 0 {
+			fmt.Println(i, " -- FizzBuzz(divisible by the both the values )",a,b)
+		} else if i%a == 0 {
+			fmt.Println(i, " -- FIZZ(only divisible by the )",a)
+		} else if i%b == 0 {
+			fmt.Println(i, " -- BUZZ(only divisible by the )",b)
+		} else {
+			fmt.Println(i)
+		}
+	}
+}
